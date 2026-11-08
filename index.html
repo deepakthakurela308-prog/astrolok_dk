@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTROLOK DK | Free Astrology</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:#09021c;color:white;line-height:1.6
+}
+header{
+background:#1b073c;padding:18px;
+display:flex;justify-content:space-between;
+align-items:center;border-bottom:1px solid gold;
+position:sticky;top:0
+}
+.logo{font-size:23px;color:gold;font-weight:bold}
+button{
+background:#e9bd32;color:#16072b;border:0;
+padding:12px 18px;border-radius:8px;
+font-weight:bold;cursor:pointer
+}
+.hero{
+text-align:center;padding:55px 15px;
+background:linear-gradient(135deg,#180438,#42117a)
+}
+.hero h1{font-size:38px;color:gold}
+.container{max-width:1100px;margin:auto;padding:20px}
+.card{
+background:#1b0b39;border:1px solid #a98526;
+border-radius:14px;padding:22px;margin:22px 0
+}
+h2{color:gold;margin-bottom:15px}
+.grid{
+display:grid;grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));gap:15px
+}
+.feature{
+background:#2b1450;padding:18px;
+border-radius:12px;border:1px solid #705493
+}
+.feature h3{color:gold;margin-bottom:8px}
+input,select,textarea{
+width:100%;padding:12px;margin:8px 0 15px;
+border:1px solid #8062aa;background:#0c0520;
+color:white;border-radius:8px
+}
+.result{
+display:none;margin-top:20px;padding:18px;
+background:#0c0520;border:1px solid gold;
+border-radius:10px
+}
+footer{
+background:#180438;text-align:center;
+padding:25px;margin-top:40px
+}
+.small{font-size:12px;color:#bbb}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🔮 ASTROLOK DK</div>
+</header>
+
+<section class="hero">
+<h1>ASTROLOK DK</h1>
+<h3>आपके सितारे, आपके भविष्य के संकेत</h3>
+<p>FREE ASTROLOGY WEBSITE</p>
+<br>
+<button onclick="document.getElementById('birth').scrollIntoView()">
+जन्म जानकारी भरें
+</button>
+</section>
+
+<main class="container">
+
+<section class="card" id="birth">
+<h2>🌟 जन्म जानकारी</h2>
+
+<form id="birthForm">
+<label>पूरा नाम</label>
+<input id="name" required placeholder="अपना नाम">
+
+<label>जन्म तारीख</label>
+<input type="date" id="dob" required>
+
+<label>जन्म समय</label>
+<input type="time" id="time" required>
+
+<label>जन्म स्थान</label>
+<input id="place" required placeholder="शहर और राज्य">
+
+<button type="submit">जानकारी देखें</button>
+</form>
+
+<div id="birthResult" class="result"></div>
+</section>
+
+<section class="card">
+<h2>✨ ASTROLOGY SERVICES</h2>
+
+<div class="grid">
+
+<div class="feature">
+<h3>💍 शादी और विवाह</h3>
+<p>विवाह से जुड़े पारंपरिक ज्योतिषीय संकेत।</p>
+</div>
+
+<div class="feature">
+<h3>💼 सरकारी नौकरी</h3>
+<p>सरकारी नौकरी और करियर संबंधी मार्गदर्शन।</p>
+</div>
+
+<div class="feature">
+<h3>🏢 प्राइवेट नौकरी</h3>
+<p>निजी क्षेत्र में करियर की जानकारी।</p>
+</div>
+
+<div class="feature">
+<h3>🎓 करियर</h3>
+<p>करियर और कार्यक्षेत्र के विकल्प।</p>
+</div>
+
+<div class="feature">
+<h3>❤️ प्रेम विवाह</h3>
+<p>प्रेम और रिश्तों की अनुकूलता।</p>
+</div>
+
+<div class="feature">
+<h3>💰 धन और व्यापार</h3>
+<p>धन, बचत और व्यापार संबंधी जानकारी।</p>
+</div>
+
+<div class="feature">
+<h3>🏠 घर और संपत्ति</h3>
+<p>घर और संपत्ति से जुड़े संकेत।</p>
+</div>
+
+<div class="feature">
+<h3>✈️ विदेश यात्रा</h3>
+<p>विदेश यात्रा की जानकारी।</p>
+</div>
+
+<div class="feature">
+<h3>👨‍👩‍👧 परिवार</h3>
+<p>पारिवारिक जीवन और संबंध।</p>
+</div>
+
+<div class="feature">
+<h3>📚 शिक्षा</h3>
+<p>पढ़ाई और शिक्षा संबंधी जानकारी।</p>
+</div>
+
+<div class="feature">
+<h3>🪐 महादशा</h3>
+<p>ग्रहों की दशा की जानकारी।</p>
+</div>
+
+<div class="feature">
+<h3>🔯 मांगलिक दोष</h3>
+<p>मांगलिक स्थिति की जानकारी।</p>
+</div>
+
+<div class="feature">
+<h3>🌙 राशिफल</h3>
+<p>दैनिक, साप्ताहिक और वार्षिक राशिफल।</p>
+</div>
+
+<div class="feature">
+<h3>⭐ जन्म कुंडली</h3>
+<p>लग्न, राशि और नक्षत्र।</p>
+</div>
+
+<div class="feature">
+<h3>💑 कुंडली मिलान</h3>
+<p>पारंपरिक गुण मिलान।</p>
+</div>
+
+<div class="feature">
+<h3>🤖 AI Astrologer</h3>
+<p>अपने सवाल पूछें।</p>
+</div>
+
+</div>
+</section>
+
+<section class="card">
+<h2>🔮 अपना सवाल पूछें</h2>
+
+<label>विषय चुनें</label>
+<select id="topic">
+<option value="शादी">शादी और विवाह</option>
+<option value="सरकारी नौकरी">सरकारी नौकरी</option>
+<option value="प्राइवेट नौकरी">प्राइवेट नौकरी</option>
+<option value="करियर">करियर</option>
+<option value="प्रेम">प्रेम</option>
+<option value="धन">धन और व्यापार</option>
+<option value="विदेश">विदेश यात्रा</option>
+<option value="शिक्षा">शिक्षा</option>
+<option value="परिवार">परिवार</option>
+<option value="कुंडली">कुंडली</option>
+<option value="अन्य">अन्य</option>
+</select>
+
+<textarea id="question" rows="3"
+placeholder="अपना सवाल लिखें..."></textarea>
+
+<button onclick="askAstro()">जवाब प्राप्त करें</button>
+
+<div id="answer" class="result"></div>
+</section>
+
+<section class="card">
+<h2>⚠️ महत्वपूर्ण सूचना</h2>
+<p>
+यह वेबसाइट सामान्य ज्योतिषीय जानकारी और मार्गदर्शन देती है।
+यह भविष्य की घटनाओं, नौकरी या विवाह की गारंटी नहीं देती।
+सटीक वैदिक गणना के लिए वास्तविक खगोलीय गणना इंजन जोड़ना आवश्यक है।
+</p>
+</section>
+
+</main>
+
+<footer>
+<h2>🔮 ASTROLOK DK</h2>
+<p>आपके सितारे, आपके भविष्य के संकेत।</p>
+<p class="small">NO SUBSCRIPTION • NO PAYMENT • NO AUTOPAY</p>
+<p class="small">© 2026 ASTROLOK DK</p>
+</footer>
+
+<script>
+
+// जन्म जानकारी और राशि
+
+document.getElementById("birthForm").addEventListener("submit",function(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let dob=document.getElementById("dob").value;
+let time=document.getElementById("time").value;
+let place=document.getElementById("place").value;
+
+if(new Date(dob+"T00:00:00")>new Date()){
+alert("सही जन्म तारीख डालें");
+return;
+}
+
+let date=new Date(dob+"T12:00:00");
+let day=date.getDate();
+let month=date.getMonth()+1;
+
+let zodiac="मीन";
+
+if((month==3&&day>=21)||(month==4&&day<=19))zodiac="मेष";
+else if((month==4&&day>=20)||(month==5&&day<=20))zodiac="वृषभ";
+else if((month==5&&day>=21)||(month==6&&day<=20))zodiac="मिथुन";
+else if((month==6&&day>=21)||(month==7&&day<=22))zodiac="कर्क";
+else if((month==7&&day>=23)||(month==8&&day<=22))zodiac="सिंह";
+else if((month==8&&day>=23)||(month==9&&day<=22))zodiac="कन्या";
+else if((month==9&&day>=23)||(month==10&&day<=22))zodiac="तुला";
+else if((month==10&&day>=23)||(month==11&&day<=21))zodiac="वृश्चिक";
+else if((month==11&&day>=22)||(month==12&&day<=21))zodiac="धनु";
+else if((month==12&&day>=22)||(month==1&&day<=19))zodiac="मकर";
+else if((month==1&&day>=20)||(month==2&&day<=18))zodiac="कुंभ";
+
+let result=document.getElementById("birthResult");
+result.style.display="block";
+
+result.innerHTML=`
+<h3 style="color:gold">नमस्ते ${safe(name)} 🔮</h3>
+<p>जन्म तारीख: ${safe(dob)}</p>
+<p>जन्म समय: ${safe(time)}</p>
+<p>जन्म स्थान: ${safe(place)}</p>
+<p>Western Sun Sign: ${zodiac}</p>
+<p>यह सामान्य राशि गणना है, वैदिक कुंडली नहीं।</p>
+`;
+});
+
+// HTML सुरक्षा
+
+function safe(value){
+return value.replace(/[&<>"']/g,function(c){
+return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+});
+}
+
+// सवालों के जवाब
+
+function askAstro(){
+
+let topic=document.getElementById("topic").value;
+let question=document.getElementById("question").value.trim();
+
+if(!question){
+alert("कृपया सवाल लिखें");
+return;
+}
+
+let answers={
+"शादी":"विवाह के पारंपरिक ज्योतिषीय अध्ययन में सप्तम भाव देखा जाता है। विवाह की निश्चित तारीख बताना संभव नहीं है।",
+"सरकारी नौकरी":"पारंपरिक ज्योतिष में दशम और षष्ठ भाव का अध्ययन किया जाता है। सरकारी नौकरी के लिए नियमित तैयारी और अभ्यास जरूरी है।",
+"प्राइवेट नौकरी":"अपनी शिक्षा, कौशल और अनुभव के अनुसार निजी क्षेत्र में अवसर तलाशें।",
+"करियर":"अपनी रुचि और योग्यता के अनुसार IT, Banking, Data Analytics और Business जैसे क्षेत्रों पर विचार करें।",
+"प्रेम":"अच्छे रिश्ते विश्वास, सम्मान और बातचीत पर निर्भर करते हैं।",
+"धन":"बजट, बचत और वित्तीय योजना पर ध्यान दें।",
+"विदेश":"विदेश यात्रा के लिए शिक्षा, वीजा और आर्थिक तैयारी जरूरी है।",
+"शिक्षा":"नियमित पढ़ाई और अभ्यास से अपने लक्ष्य की ओर बढ़ें।",
+"परिवार":"परिवार में सम्मान और अच्छा संवाद महत्वपूर्ण है।",
+"कुंडली":"सटीक वैदिक कुंडली के लिए जन्म विवरण के साथ खगोलीय गणना इंजन चाहिए।",
+"अन्य":"अपने सवाल को थोड़ा विस्तार से लिखें।"
+};
+
+let box=document.getElementById("answer");
+box.style.display="block";
+
+box.innerHTML=`
+<h3 style="color:gold">🔮 ASTROLOK DK का जवाब</h3>
+<p><b>विषय:</b> ${safe(topic)}</p>
+<p><b>सवाल:</b> ${safe(question)}</p>
+<br>
+<p>${answers[topic]}</p>
+<p class="small">यह सामान्य जानकारी है, निश्चित भविष्यवाणी नहीं।</p>
+`;
+}
+
+</script>
+
+</body>
+  </html>
